@@ -37,15 +37,23 @@
         <div class="navbar-center">
             <h1 class="navbar-title">The Violence of Earth</h1>
         </div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+        <div class="nav-menu">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+            <label for="menu-toggle" class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </label>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
         <form class="search-form" action="#" method="get">
-            <input type="text" name="query" placeholder="Search...">
-            <button type="submit">🔍</button>
+            <input class="search-bar" type="text" name="query" placeholder="Search...">
+            <button class="search-icon" type="submit">🔍</button>
         </form>
     </nav>
 
@@ -63,7 +71,7 @@
         <img src="resources/hurricane-63005_1280.jpg" alt="Hurricane" class="image">
         <img src="resources/storm-8443707_1280.webp" alt="Tornado" class="image">
     </div>
-    
+
     <!-- Sticky Footer -->
     <footer>
         &copy; 2024 All Rights Reserved.
