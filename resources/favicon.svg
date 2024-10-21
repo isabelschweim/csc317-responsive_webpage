@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- Background -->
+  <rect width="1024" height="1024" fill="black"/>
+  
+  <!-- Earth representation -->
+  <circle cx="512" cy="512" r="300" fill="none" stroke="red" stroke-width="40"/>
+
+  <!-- Jagged cracks across the earth -->
+  <path d="M 350 200 Q 450 300 412 412 Q 390 480 500 500 Q 560 550 600 500 Q 650 460 700 500 Q 750 530 800 570" 
+        stroke="red" stroke-width="10" fill="none"/>
+  
+  <path d="M 300 512 Q 400 550 450 600 Q 500 620 550 700 Q 600 720 670 650"
+        stroke="red" stroke-width="10" fill="none"/>
+
+  <!-- Smaller cracks extending outwards -->
+  <path d="M 512 100 Q 520 200 600 300" stroke="red" stroke-width="8" fill="none"/>
+  <path d="M 400 300 Q 500 350 550 380" stroke="red" stroke-width="8" fill="none"/>
+  <path d="M 200 512 Q 350 500 400 600" stroke="red" stroke-width="8" fill="none"/>
+  
+  <!-- Fires emerging from the cracks -->
+  <path d="M 512 412 Q 532 390 550 420 Q 570 390 600 420 Q 630 390 650 420" 
+        stroke="red" stroke-width="6" fill="none"/>
+
+  <!-- Additional cracks around -->
+  <path d="M 212 600 Q 312 650 412 750" stroke="red" stroke-width="6" fill="none"/>
+  <path d="M 600 512 Q 680 550 800 620" stroke="red" stroke-width="6" fill="none"/>
+  
+  <!-- Flames effect on edges -->
+  <path d="M 300 750 Q 350 780 400 740 Q 450 770 500 740 Q 550 760 600 740 Q 650 770 700 750" 
+        stroke="red" stroke-width="8" fill="none"/>
+</svg>
