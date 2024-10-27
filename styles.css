@@ -376,5 +376,18 @@ background: none;
         padding: 8px;
         width: 200px;
     }
-    
+
+    .back-to-top {
+        position: sticky;
+        bottom: 20px;
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #9c1616;
+        color: white;
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: none;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+      }
 }
