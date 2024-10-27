@@ -11,6 +11,10 @@ html, body {
     font-family: "Inter", Arial, Helvetica, sans-serif;
 }
 
+::selection {
+    background-color: #533232;
+    color: #ff4747;
+}
 
 
 /* Nav Bar */
@@ -287,16 +291,14 @@ color: beige;
 transition: all 0.5s ease;
 }
 
+.text a:active {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(169, 222, 238);
+}
 
 
-/* Invisible spacer */
-/* .spacer {
-height: 10rem;
-background: none;
-} */
-
-/* Scroll Button styling */
-    
+    /* Scroll Button styling */
     
     /* Trigger the button to appear after scrolling past the background image */
     .spacer + .icon-item {
@@ -311,14 +313,7 @@ background: none;
     'opsz' 24
     }
     
-    .back-to-top{
-        display: none;
-    }
 
-   
-
-
-    
 /* Mobile-specific Content Styling */
 @media (max-width: 600px) {
 
@@ -435,20 +430,6 @@ background: none;
         padding: 8px;
         width: 200px;
     }
-
-    /* .back-to-top {
-        position: sticky;
-        bottom: 20px;
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #9c1616;
-        color: white;
-        border-radius: 5px;
-        text-align: center;
-        text-decoration: none;
-        opacity: 1;
-        transition: opacity 0.3s ease;
-      } */
 
       footer {
         display: flex;
