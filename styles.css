@@ -11,23 +11,7 @@ html, body {
     font-family: "Inter", Arial, Helvetica, sans-serif;
 }
 
-body {
-    overflow-y: scroll;
-    background-image: linear-gradient(to right top, #da1414 50%, #eee 50%);
-    background-size: 100% calc(100% - 100vh + 5px);
-    background-repeat: no-repeat;
-}
 
-body::before {
-    content: "";
-    position: fixed;
-    top: 10px;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: #fff;
-    z-index: -1;
-}
 
 /* Nav Bar */
 .navbar {
@@ -116,15 +100,6 @@ body::before {
     color: #999;
 }
 
-footer {
-    background-color: #533232;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-}
-
-
 
 /* Image Overlay Fade */
 @media (min-width: 601px) {
@@ -175,7 +150,98 @@ footer {
     .container:hover .middle {
         opacity: 1;
     }
+    
+    footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: #533232;
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    /* Footer Icons - 2x2 Grid */
+    .footer-icons {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 15%;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .icon-item {
+        flex: 1 1 45%; /* Each icon takes roughly half of the row in 2x2 layout */
+        background-color: white;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        color: #533232;
+    }
+    
+    /* Footer Content - Horizontal Blocks */
+    .footer-content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 75%;
+        margin-bottom: 20px;
+    }
+    
+    
+    .footer-content ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .footer-content ul li a,
+    .footer-content div a {
+        color: white;
+        transition: color 0.3s;
+    }
+    
+    .footer-content ul li a:hover,
+    .footer-content div a:hover {
+        color: #ddd;
+        text-decoration: none;
+    }
+    
+    .footer-bottom p {
+        font-size: 0.9em;
+        color: #ddd;
+    }
 }
+
+/* Centered Newsletter and Footer Bottom */
+    .newsletter, .footer-bottom {
+        width: 100%;
+        max-width: 600px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .newsletter input[type="email"] {
+        padding: 8px;
+        border-radius: 4px;
+        border: none;
+        margin-right: 5px;
+    }
+    
+    button {
+        padding: 8px 15px;
+        border-radius: 4px;
+        background-color: #ffffff;
+        color: #533232;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    button:hover {
+        background-color: #ddd;
+    }
 
 .text {
 background-color:#721818;
@@ -224,30 +290,16 @@ transition: all 0.5s ease;
 
 
 /* Invisible spacer */
-/*.spacer {
+/* .spacer {
 height: 10rem;
 background: none;
-}
+} */
 
 /* Scroll Button styling */
-/*.scroll-button {
-    position: sticky;
-    bottom: 2rem;
-    left: 2rem;
-    display: inline-flex;
-    padding: 0.5rem;
-    background-color: white;
-    color: grey;
-    border-radius: 0.5rem;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    opacity: 1;
-    transition: opacity 0.3s ease;
-    }
+    
     
     /* Trigger the button to appear after scrolling past the background image */
-    /*.spacer + .scroll-button {
+    .spacer + .icon-item {
     opacity: 1;
     }
 
@@ -259,6 +311,13 @@ background: none;
     'opsz' 24
     }
     
+    .back-to-top{
+        display: none;
+    }
+
+   
+
+
     
 /* Mobile-specific Content Styling */
 @media (max-width: 600px) {
@@ -377,7 +436,7 @@ background: none;
         width: 200px;
     }
 
-    .back-to-top {
+    /* .back-to-top {
         position: sticky;
         bottom: 20px;
         display: inline-block;
@@ -389,5 +448,53 @@ background: none;
         text-decoration: none;
         opacity: 1;
         transition: opacity 0.3s ease;
-      }
+      } */
+
+      footer {
+        display: flex;
+        flex-direction: column;
+        background-color: #533232;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: sticky;
+    }
+    
+    .footer-icons {
+        display: flex;
+        flex-direction: row;
+        position: sticky;
+        justify-content: center;
+    }
+    
+    .icon-item {
+        justify-content: space-around;
+        align-items: center;
+        position: sticky;
+        bottom: 2rem;
+        left: 2rem;
+        margin: 0 1rem;
+        padding: 0.5rem;
+        background-color: white;
+        color: rgb(138, 0, 0);
+        border-radius: 0.5rem;
+        opacity: 1;
+    }
+    
+      
+    .footer-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .footer-content h3 {
+        margin: 15px 20px ;
+    }
+
+    .footer-content ul li,
+    .footer-content button {
+        display: none;
+    }
+      
 }
