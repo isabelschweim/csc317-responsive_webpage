@@ -407,7 +407,7 @@ a:active {
     .search-toggle-checkbox:checked + .search-icon + .search-bar {
         display: flex;
         flex-direction: row;
-        position: absolute;
+        position: sticky;
         top: 80px;
         right: 20px;
         background-color: white;
